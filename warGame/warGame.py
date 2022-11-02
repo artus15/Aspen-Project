@@ -94,17 +94,3 @@ def war(p1, p2, cardsPlayed, buff1, buff2):
     if(buff1.val == buff2.val):
         buff1, buff2, p1, p2, cardsPlayed= war(p1, p2, cardsPlayed, buff1, buff2)
     return buff1, buff2, p1, p2, cardsPlayed
-
-
-
-if __name__=="__main__":
-    counts = []
-    players = []
-    for i in range(1000):
-        counts.append(play()[0]) 
-        players.append(play()[1])  
-    print("The average number of rounds is: {}".format(round(sum(counts)/len(counts))))
-    if (round(sum(players)/len(players)) ==1):
-        print("p2 won the most times")
-    else:
-        print("p1 won the most")
