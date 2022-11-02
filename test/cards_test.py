@@ -3,7 +3,7 @@ import os
 import sys
 os.path.join(os.path.dirname(__file__), '../')
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
-from warGame.cards import *
+from backend.warGame.cards import *
 
 class CardTest(unittest.TestCase):
     def test_create_card(self):
