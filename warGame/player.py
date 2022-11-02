@@ -3,3 +3,4 @@ class Player:
         '''This initiates a player with name
         '''
         self.name = name
+        self.deck = []
