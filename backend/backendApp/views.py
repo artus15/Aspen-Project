@@ -49,3 +49,8 @@ def deletePlayer(request, pk):
     player = PlayerClass.objects.get(id=pk)
     PlayerClass.delete()
     return Response('Workout Class Deleted')
+
+def home(request):
+    players = PlayerClass.objects.all()
+    context = {'players': players}
+    return render(request, 'home.html', context)
