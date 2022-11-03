@@ -27,7 +27,7 @@ def createPlayer(request, *args, **kwargs):
 
 
 @api_view(['GET'])
-def getPlayers():
+def getPlayers(request):
     user = PlayerClass.objects.all()
     serializer = PlayerClassSerializer(user, many=True)
     return Response(serializer.data)
