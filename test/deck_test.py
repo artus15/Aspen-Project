@@ -3,7 +3,7 @@ import os
 import sys
 os.path.join(os.path.dirname(__file__), '../')
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
-from warGame.deck import *
+from backend.warGame.deck import *
 
 class DeckTest(unittest.TestCase):    
     
