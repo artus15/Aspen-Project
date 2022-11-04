@@ -19,5 +19,11 @@ from backendApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('play/', views.getPlayers)
+    path('players/', views.getPlayers),
+    path('updatePlayer/<int:pk>/', views.updatePlayerInfo),
+    path('createPlayer/', views.createPlayer),
+    path('playWar/', views.playWar),
+    path('deletePlayer/<int:pk>/', views.deletePlayer),
+    path('', views.home, name='home'),
+    path('statistics/', views.warStatistics, name='home'),
 ]
