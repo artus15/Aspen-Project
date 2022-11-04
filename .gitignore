@@ -131,3 +131,9 @@ dmypy.json
 venv/
 
 .vscode
+
+report.html
+
+output.xml
+
+log.html

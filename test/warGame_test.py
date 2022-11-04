@@ -21,6 +21,6 @@ class warGameTest(unittest.TestCase):
     def test_play(self):
         '''Test the play functionnality of the war game
         '''
-        count, winner = play("Artus", "Aspen")
+        count, winner, _ = play("Artus", "Aspen")
         self.assertTrue(count>0)
         self.assertTrue(winner=="Artus" or winner == "Aspen")
