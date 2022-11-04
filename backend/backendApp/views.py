@@ -9,6 +9,11 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from django.views.decorators.csrf import csrf_exempt
+
+from warGame.warGame import *
+
+from django.views.decorators.csrf import requires_csrf_token
 
 class PlayerClassView(viewsets.ModelViewSet):
     serializer_class = PlayerClassSerializer
@@ -32,6 +37,12 @@ def getPlayers(request):
     serializer = PlayerClassSerializer(user, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getPlayersByName(request, name):
+    user = PlayerClass.objects.get(name=name)
+    serializer = PlayerClassSerializer(user, many=False)
+    return Response(serializer.data)
+
 
 @api_view(['PATCH'])
 def updatePlayerInfo(request, pk, *args, **kwargs):
@@ -39,7 +50,7 @@ def updatePlayerInfo(request, pk, *args, **kwargs):
     data = request.data
     user_object.name = data.get("name", user_object.name)
     user_object.password = data.get("password", user_object.password)
-
+    user_object.wins = data.get("wins", user_object.wins)
     user_object.save()
     serializer = PlayerClassSerializer(user_object)
     return Response(serializer.data)
@@ -47,10 +58,24 @@ def updatePlayerInfo(request, pk, *args, **kwargs):
 @api_view(['DELETE'])
 def deletePlayer(request, pk):
     player = PlayerClass.objects.get(id=pk)
-    PlayerClass.delete()
-    return Response('Workout Class Deleted')
+    PlayerClass.delete(player)
+    return Response('Player {} Deleted'.format(player.name))
 
+@requires_csrf_token
 def home(request):
     players = PlayerClass.objects.all()
     context = {'players': players}
     return render(request, 'home.html', context)
+
+@csrf_exempt
+@api_view(['PATCH'])
+def playWar(request):
+    data = request.data
+    name1 = data.get("name1")
+    name2 = data.get("name2")
+    name = play(name1, name2)[1]
+    player = PlayerClass.objects.get(name=name)
+    player.wins = data.get("wins", player.wins)+1
+    player.save()
+    serializer = PlayerClassSerializer(player)
+    return Response("{} wins for the {}th time".format(request.data.get("name", player.name), request.data.get("wins", player.wins)))
