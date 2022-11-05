@@ -205,11 +205,14 @@ from root folder (you need to have docker installed)
  ```sh
  cd backend
  ```
-
+ ```sh
+ docker build -t aspen-project-image .
+ ```
+ > Note: This may take a few minutes
  ```sh
  docker-compose up
  ```
- > Note: The image will be built.TODO
+ > Once the message "Starting development server at http://0.0.0.0:8000/" appears, you will be able to open http://127.0.0.1:8000 to have access to the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
