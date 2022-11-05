@@ -99,7 +99,7 @@ This project is mainly built in python-Django linked to a postgresSQL database-H
 
 1. Create a Python virtual environment:
   ```sh
-  python3 -m venv ./venv --prompt NAME_VENV
+  python -m venv ./venv --prompt NAME_VENV
   ```
 2. Activate the new virtual environment (this works on MacOS, Linux, and gitbash terminal in Windows):
   ```sh
