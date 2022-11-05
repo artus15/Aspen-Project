@@ -14,9 +14,8 @@
         {% for player in players %}
         
         <div style="border: 1px solid black; display: flex; width: fit-content">
-            <h2>{{ player.name }}</h2>
+            <h2 style="margin-right:40px;">{{ player.name }}</h2>
             <button onclick="myFunction({{player.wins}})">See Number of Wins</button>
-            <button onclick="myFunctionGet()">Call get Users</button>
             
         </div>
         
@@ -27,7 +26,6 @@
             <input type="text" id="inputPass">
             <button onclick="myFunctionPlay()">Play</button>
         </div>
-        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
     </ul>
 
 
@@ -38,15 +36,6 @@
     <script>
         function myFunction(wins) {
           alert("Lifetime number of wins: "+ wins)
-        }
-        function myFunctionGet(){
-            $.ajax({
-                url: 'http://127.0.0.1:8000/players/',
-                dataType: 'json',
-                success: function(result){
-                    result.forEach((player,i)=> console.log(player.wins))
-                }
-            })
         }
         function myFunctionPlay(){
             var player1 = $("#inputName").val();
