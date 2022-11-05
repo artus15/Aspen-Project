@@ -111,7 +111,7 @@ This project is mainly built in python-Django linked to a postgresSQL database-H
   source venv/Scripts/activate
   ``` 
   
-3. Install backend dependencies to the virtual environment:
+3. Install backend dependencies to the virtual environment (this may take a few minutes):
   ```sh
   python -m pip install -r backend/requirements.txt 
   ```
