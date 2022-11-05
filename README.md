@@ -26,7 +26,7 @@
   <p align="center">
     A very basic, nonetheless awesome, Django - Heroku - Docker project !
     <br />
-    <a href="https://github.com/artus15/Aspen-Project/wiki"><strong>Explore the war battle statistics</strong></a>
+    <a href="https://github.com/artus15/Aspen-Project/wiki/War-Statistics"><strong>Explore the war battle statistics</strong></a>
     <br />
     <a href="https://github.com/artus15/Aspen-Project/issues">Report Bug</a>
     <br />
