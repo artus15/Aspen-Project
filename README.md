@@ -153,17 +153,34 @@ The calls can be made using any API platform. I can recommend using [Postman](ht
    ```sh
   http://127.0.0.1:8000/updatePlayer/ID/
   ```
-  > This is a PATCH method which returns the updated player. To update the info of a player, you need to pass, as a JSON object, a 'name', a 'password' and a number of 'wins'. Don't forget to mention the ID of the player you want to update.
+  > This is a PATCH method which returns the updated player. To update the info of a player, you need to pass, as a JSON object, a 'name', a 'password' and a number of 'wins'. Don't forget to mention the ID of the player you want to update. 
+  Example of one JSON request:
+  {
+    "name": "Player",
+    "password": "passwrd",
+    "wins: 0
+}
   
   ```sh
   http://127.0.0.1:8000/createPlayer/
   ```
   > This is a POST method which returns the created player. To create the player, you need to pass, as a JSON object, a 'name', a 'password' and a number of 'wins' (usually 0). 
+    Example of one JSON request:
+  {
+    "name": "Player",
+    "password": "passwrd",
+    "wins: 0
+}
   
   ```sh
   http://127.0.0.1:8000/playWar/
   ```
   > This is a PATCH method which makes two players play War and returns the name of the winner and his lifetime wins. To play War, you need to pass, as a JSON object, the name of the first player as 'name1', and the name of the second player as 'name2'.
+  Example of one JSON request:
+  {
+    "name1": "Artus",
+    "name2": "Aspen"
+}
   
   ```sh
   http://127.0.0.1:8000/deletePlayer/ID/
