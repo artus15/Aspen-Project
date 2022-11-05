@@ -54,6 +54,7 @@
       </ul>
     </li>
     <li><a href="#run-the-app">Run the app</a></li>
+    <li><a href="#different-api-calls">Different API calls</a></li>
     <li><a href="#run-the-tests">Run the Tests</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -121,6 +122,17 @@ This project is mainly built in python-Django linked to a postgresSQL database-H
  You can also play a game of War by entering the name of the two players, an alert will pop up with the name of the winner and it's lifetime number of wins.
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
+## Run the app
+
+  1. cd into the backend folder:
+  ```sh
+  cd backend 
+  ```
+  2. run the backend:
+  ```sh
+  python manage.py runserver
+  ```
 
 ## Different API calls
 
@@ -150,17 +162,6 @@ The calls can be made using any API platform. I can recommend using [Postman](ht
   http://127.0.0.1:8000/deletePlayer/ID/
   ```
   > This is a DELETE method which deletes the player with ID from the database. Don't forget to include the ID of the player you want to delete.
-  
-## Run the app
-
-  1. cd into the backend folder:
-  ```sh
-  cd backend 
-  ```
-  2. run the backend:
-  ```sh
-  python manage.py runserver
-  ```
 
 ## Run the Tests
 
