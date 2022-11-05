@@ -94,6 +94,7 @@ This project is mainly built in python-Django linked to a postgresSQL database-H
 
   - have Python installed ([Follow this](https://www.python.org/downloads/))
   - have Docker installed, if you want to run the application as a container ([Follow this](https://docs.docker.com/get-docker/))
+  - have Docker Desktop installed, if you want to run the application as a container ([Follow this](https://www.docker.com/products/docker-desktop/))
  
 ### Installation
 
