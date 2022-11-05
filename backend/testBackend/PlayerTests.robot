@@ -15,7 +15,7 @@ Update player info
     [Documentation]   Update some user info
     Create Session   Update_player   ${URL}
     ${data}   Create Dictionary   name=tester2   password=psswrd2   wins=0
-    ${response}=   RequestsLibrary.PATCH On Session   Update_player   updatePlayer/11/   json=${data}
+    ${response}=   RequestsLibrary.PATCH On Session   Update_player   updatePlayer/12/   json=${data}
     Log to console   Player updated info: ${response.json()}
     Should Be Equal As Strings   ${response.json()}[name]   tester2
     Should Be Equal As Strings   ${response.json()}[password]   psswrd2
@@ -23,4 +23,4 @@ Update player info
 Delete existing player
     [Documentation]   Delete existing player
     Create Session   Delete_player   ${URL}
-    ${response}=   delete on session   Delete_player   deletePlayer/11/
+    ${response}=   delete on session   Delete_player   deletePlayer/12/
