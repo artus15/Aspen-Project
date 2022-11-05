@@ -79,8 +79,8 @@ This project is mainly built in python-Django linked to a postgresSQL database-H
 
 
 * [![Django][DjangoB]][Django]
-* [![Docker][DockerVM]][Docker]
 * [![Heroku][HerokuB]][Heroku]
+* [![Docker][DockerVM]][Docker]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
