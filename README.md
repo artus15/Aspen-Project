@@ -101,10 +101,16 @@ This project is mainly built in python-Django linked to a postgresSQL database-H
   ```sh
   python -m venv ./venv --prompt NAME_VENV
   ```
-2. Activate the new virtual environment (this works on MacOS, Linux, and gitbash terminal in Windows):
+2. Activate the new virtual environment (this works on MacOS and Linux):
   ```sh
   source venv/bin/activate
   ``` 
+  
+  On Windows, using gitbash:
+  ```sh
+  source venv/Scripts/activate
+  ``` 
+  
 3. Install backend dependencies to the virtual environment:
   ```sh
   python -m pip install -r backend/requirements.txt 
