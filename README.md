@@ -192,6 +192,21 @@ python -m robot PlayerTests.robot
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Run the server as a docker container
+
+from root folder (you need to have docker installed)
+
+ ```sh
+ cd backend
+ ```
+
+ ```sh
+ docker-compose up
+ ```
+ > Note: The image will be built.TODO
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
