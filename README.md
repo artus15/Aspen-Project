@@ -94,18 +94,25 @@ This project is mainly built in python-Django linked to a postgresSQL database-H
 
   - have Python installed ([Follow this](https://www.python.org/downloads/))
   - have Docker installed, if you want to run the application as a container ([Follow this](https://docs.docker.com/get-docker/))
+  - have Docker Desktop installed, if you want to run the application as a container ([Follow this](https://www.docker.com/products/docker-desktop/))
  
 ### Installation
 
 1. Create a Python virtual environment:
   ```sh
-  python3 -m venv ./venv --prompt NAME_VENV
+  python -m venv ./venv --prompt NAME_VENV
   ```
-2. Activate the new virtual environment (this works on MacOS, Linux, and gitbash terminal in Windows):
+2. Activate the new virtual environment (this works on MacOS and Linux):
   ```sh
   source venv/bin/activate
   ``` 
-3. Install backend dependencies to the virtual environment:
+  
+  On Windows, using gitbash:
+  ```sh
+  source venv/Scripts/activate
+  ``` 
+  
+3. Install backend dependencies to the virtual environment (this may take a few minutes):
   ```sh
   python -m pip install -r backend/requirements.txt 
   ```
@@ -199,11 +206,14 @@ from root folder (you need to have docker installed)
  ```sh
  cd backend
  ```
-
+ ```sh
+ docker build -t aspen-project-image .
+ ```
+ > Note: This may take a few minutes
  ```sh
  docker-compose up
  ```
- > Note: The image will be built.TODO
+ > Once the message "Starting development server at http://0.0.0.0:8000/" appears, you will be able to open http://127.0.0.1:8000 to have access to the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
